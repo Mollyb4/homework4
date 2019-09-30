@@ -1,0 +1,329 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+  background-color: #ddd;
+  font-size: 18px;
+  margin: 0;
+  padding: 0;
+}
+
+h1{
+  font-size: 50px;
+  line-height: 1;
+  padding: 50px 0;
+  text-align: center;
+  color: white; 
+}
+
+h2{
+  font-size: 32px;
+  line-height: 1.5;
+}
+
+nav ul{
+  list-style-type: none;
+  margin: 0; 
+  padding-right: 20px; 
+}
+
+nav li{
+  display: inline; 
+  padding-right: 20px; 
+  /*Your code here */
+}
+
+nav a{
+  color: black;
+  font-weight: bold;
+  text-decoration: none;  /*Your code here - remove the underline*/
+}
+/* makes border 2px black */
+nav a:focus{
+  border: 2px solid black; 
+}
+
+nav a:hover{
+  text-decoration: underline;  /*Your code here - add the underline*/
+}
+
+.skip a{
+  background: white;
+  left: 0;
+  padding: 6px;
+  position: absolute; /*Your code here - position relative to the parent */
+  top: -40px;     /*Your code here - place 40px higher */
+  -webkit-transition: top 1s ease-out;
+  transition: top 1s ease-out;
+  z-index: 1;
+
+}
+/*moves skip link to the top.*/
+.skip a:focus, .skip a:active{
+  border: 2px solid black; 
+  left: auto; 
+  top: auto; 
+  /* width: 30%;  */
+  height: auto; 
+  overflow: auto; 
+  margin: 40px; 
+  padding: 6px; 
+  z-index: 999; 
+} 
+
+
+footer{
+  background-color: black;
+  color: white;
+  grid-column: 1 / -1;  /*Can you explain what this does?*/
+  grid-row: 7 / auto;   /*Can you rewrite it?*/
+  padding-top: 30px;
+  text-align: center;
+  /* grid-column: 1/ span 3;  */
+  /* grid-row: 7/ span 1; */
+}
+
+
+/* .container{} */
+
+  /*Your code here  */
+  /* display: grid;  */
+  /* justify-self: center; 
+  align-self: center;  */
+  /* grid-template-columns: 100px 500px 100px;  */
+  /* row-gap: 15px; */
+
+  /*Provided*/
+  /* grid-template-rows: 30px auto auto auto auto auto 100px;  */
+
+.container{
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  grid-template-columns: 100px 500px 100px;
+  grid-template-rows: 30px auto auto auto auto auto 100px;
+  /* grid-template-rows: repeat(7, 1fr);  */
+  grid-column-gap: 0px; 
+  row-gap: 15px; 
+  width: 100vw; 
+}
+
+
+.nav{
+  /* display: grid;  */
+  padding-top: 20px; 
+  padding-bottom: 20px; 
+  text-decoration: none; 
+  /* justify-self: center;  */
+  /* align-self: left;  */
+  grid-column: 1/ span 3; 
+  grid-row: 1/ span 1;
+   /*Your code here */
+
+  /*Provided*/
+  background-color: #ddd;
+  padding: 20px 0; 
+  text-align: left; 
+}
+
+/* underlines nav links on hover */
+.nav a:hover{
+  text-decoration: underline; 
+}
+
+
+header{
+  background-attachment: fixed; /* Parallax effect */
+  background-image: url("../images/header.jpg");  /* Your code here - Link to header.jpg in the images folder */
+  background-position: center;  /* Parallax effect */
+  background-repeat: no-repeat; /* Parallax effect */
+  background-size: cover;       /* Parallax effect */
+  /* color: white; */
+  height: 400px;                /* Parallax effect */
+  grid-column: 1/ -1; 
+  grid-row: 2/ span 1;
+
+  /*Your code here - cover the entire row*/
+}
+
+header p{
+  color: white;
+  font-size: 24px;
+  padding: 0 100px;
+  text-align: center;
+}
+
+.about-image{
+  grid-column: 1/ span 3; 
+  grid-row: 3/ span 1; 
+  max-height: 700px;
+  overflow: hidden; 
+  /*Your code here */
+
+}
+
+.about{
+  grid-column: 2/ span 1;  
+  grid-row: 3/ span 1;
+  /*Your code here */
+}
+
+.method-image{
+  grid-column: 1/ span 3; 
+  grid-row: 4/ span 1; 
+  max-height: 700px;
+  overflow: hidden; 
+  /*Your code here */
+}
+
+.method{
+  grid-column: 2/ span 1;  
+  grid-row: 4/ span 1;
+    /*Your code here - start in the 2nd column*/
+}
+
+.clients-image{
+  grid-column: 1/ span 3; 
+  grid-row: 5/ span 1; 
+  max-height: 700px;
+  overflow: hidden; 
+ /*Your code here */
+}
+
+.clients{
+  grid-column: 2/ span 1;  
+  grid-row: 5/ span 1; 
+ /*Your code here */
+}
+
+.contact-image{
+  grid-column: 1/ span 3; 
+  grid-row: 6/ span 1; 
+  max-height: 700px;
+  overflow: hidden;
+   /*Your code here */
+}
+
+.contact{
+  grid-column: 2/ span 1;  
+  grid-row: 6/ span 1;
+   /*Your code here */
+}
+
+.text-block{ 
+
+   /*Your code here */
+  /* align-content: center;  */
+  row-gap: 15px;
+  background-color: rgba(255, 255, 255, .8);
+  border: 10px solid black;
+  padding: 30px; 
+  overflow: hidden; 
+  justify-self: center; 
+  align-self: center;
+}
+
+
+
+@media only screen and (min-width: 800px) /*Your code here - Add the first media query.*/{
+
+  .container{ 
+    /*Your code here */
+    /* display: grid;  */
+    grid-template-rows: 70px 400px 400px 400px 400px 400px 100px; 
+    grid-template-columns: 50px auto 500px auto 50px; 
+  }
+
+  .nav{
+    background-color: #ddd;
+    display: grid; 
+    text-align: right; 
+    padding: 35px 0;  
+    grid-column: 1/-1; 
+    grid-row: 1/ span 1;  
+
+     /*Your code here */
+  }
+
+  .about-image{
+    grid-column: 2/ span 2; 
+    grid-row: 3/ span 1; 
+    max-height: 700px; 
+    overflow: hidden; 
+     /*Your code here */
+    }
+
+  .about{
+    grid-column: 3/ span 2; 
+    grid-row: 3/ span 1; 
+    /*Your code here */
+  }
+
+  .method-image{
+    grid-column: 3/ span 2; 
+    grid-row: 4/ span 1; 
+    max-height: 700px; 
+    overflow: hidden; 
+    /*Your code here */
+  }
+
+  .method{
+    grid-column: 2/ span 2; 
+    grid-row: 4/ span 1; 
+    /*Your code here */
+  }
+
+  .clients-image{
+    grid-column: 2/ span 2; 
+    grid-row: 5/ span 1; 
+    max-height: 700px; 
+    overflow: hidden;
+    /*Your code here */
+
+  }
+
+  .clients{
+    grid-column: 3/ span 2; 
+    grid-row: 5/ span 1; 
+    /*Your code here */
+  }
+
+  .contact-image{
+    grid-column: 3/ span 2; 
+    grid-row: 6/ span 1; 
+    max-height: 700px; 
+    overflow: hidden;
+    /*Your code here */
+  }
+  
+
+  .contact{
+    grid-column: 2/ span 2; 
+    grid-row: 6/ span 1; 
+    /*Your code here */
+  }
+
+}  /*End the media query*/
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+    scroll-behavior: auto; /* Removes scroll animation */
+    animation: none; 
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;   /* Your code here - set to default setting */
+    transition: none !important;  /* Your code here - set to default setting */
+    z-index: 1;
+  }
+
+
+  .skip a:focus{
+    top:0;
+  }
+}
